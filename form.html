@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- meta für Responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheet -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto+Slab:wght@400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+  <nav class="nav-bar-form">
+    <!-- Hamburger Menu Button -->
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <!-- (Wahrscheinlich?) der Code für den von Font Awesome eingefügten Hamburger Button / Icon -->
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <a href="index.html"><img id="logo" src="images/logo2.png" alt=""></a>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+<!-- FORM HEADER -->
+  <section class="form-header">
+    <div class="yellow-box-left">
+      <h1>Join our team!</h1>
+    </div>
+    <div class="text-box">
+      <p>Interested in working with us? Please take this short survey.</p>
+      <p class="center"><b>Thanks!</b></p>
+    </div>
+  </section>
+
+  <section class="text-box">
+
+    <!-- Form -->
+    <form id="survey-form">
+
+      <!-- Basic infos -->
+      <div class="basic-info">
+        <label>Name:</label>
+        <input class="name input-field" type="text" name="name" value="" required>
+        <label for="email">Email:</label>
+        <input class="email input-field" type="email" name="email" value="" required>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <label for="dropdown-languages">Which languages do you speak?</label>
+        <select class="dropdown-languages input-field" name="languages" required>
+          <option value="urdu" checked>Urdu</option>
+          <option value="punjabi">Punjabi</option>
+          <option value="sindhi">Sindhi</option>
+          <option value="english">English</option>
+        </select>
+      </div>
+
+      <!-- Textarea 1 -->
+      <div class="textarea">
+        <label for="skills">Which position are you applying for? What skills can you bring to the job?</label>
+        <textarea class="input-field" name="name" rows="8" cols="80" required></textarea>
+      </div>
+
+      <!-- Checkboxes Availability -->
+      <div class="checkboxes">
+        <label for="available">How long would you be available?</label>
+        <div class="input-field">
+          <label class="checkbox-item"><input id="one-year" type="checkbox" value="one-year" checked> One year or less</label>
+          <label class="checkbox-item"><input id="five-years" type="checkbox" value="five-years"> Up to five years</label>
+          <label class="checkbox-item"><input id="unlimited" type="checkbox" value="unlimited"> Unlimited</label>
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="textarea">
+        <label for="textfeld">What motivates you to work with us? </label>
+        <textarea class="input-field last-text-field" name="message" rows="10" cols="50" required></textarea>
+        <button class="button yellow">Submit</button>
+      </div>
+
+    </form>
+
+  </section>
+
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>

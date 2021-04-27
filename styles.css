@@ -1,0 +1,691 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  --white: #DCEBEB;
+  --black: #1a1a1a;
+  --yellow: #DBAF4D;
+  --pink: #F26398;
+  --green: #9DBF9B;
+  --blue: #4F6EDB;
+}
+
+/* COLOR CLASSES */
+.yellow {
+  background-color: var(--yellow);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.pink {
+  background-color: var(--pink);
+}
+
+/* TYPO */
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.9rem;
+  padding-bottom: 1.3rem;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+b {
+  font-weight: 400;
+}
+
+ul {
+  padding-bottom: 20px;
+}
+
+/* margin-left gebe ich ein, damit die Bulletpoints eingerückt sind und zwar AUCH der Text in der zweiten Zeile eines Punktes */
+li {
+  margin-left: 24px;
+}
+
+.space {
+  letter-spacing: -0.09em;
+  /* Hiermit habe ich den Abstand zwischen dem W und dem darauf folegenden Buchstaben in den h1 verkleinert, da das Kerning dort nicht gut war. */
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 10px;
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--yellow);
+}
+
+/*
+/* Hiermit wird die Unterbrechung der Unterstreichung bei Buchstaben wie p und y aufgehoben (sähe sonst nämlich beim y am Ende in diesem Fall sehr scheisse aus.) */
+/*
+.u-blue {
+    text-decoration-color: var(--blue);
+}
+
+.u-pink {
+    text-decoration-color: var(--pink);
+}
+
+.u-green {
+    text-decoration-color: var(--green);
+} */
+/* NAV BAR */
+nav, .nav-bar-form {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+  z-index: 1000;
+}
+
+#logo {
+  width: 116px;
+  height: 57px;
+  margin: 11.5px 20px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 8px 13px;
+}
+
+li a.active, li a:hover {
+  background: var(--pink);
+  transition: .5s;
+  /* Halbe Sekunde zum Einblenden des Hover Effekts */
+}
+
+/* Hamburger Menu Button */
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* SCROLLING FEATURE NAVBAR */
+.nav-bar.scrolled {
+  background: var(--yellow);
+}
+
+.text-section {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+/* MAIN PART */
+/* HEADER */
+#header-img {
+  width: 100vw;
+}
+
+/* HEADLINES */
+h1 {
+  color: var(--black);
+  display: inline;
+  padding: 10px 20px;
+  font-size: 5rem;
+  background-color: var(--yellow);
+}
+
+p, ul {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
+/* CONTENT SECTIONS */
+.yellow-box-right {
+  text-align: right;
+}
+
+.yellow-box-right h1 {
+  padding-right: 25px;
+}
+
+.text-box, .contact-box {
+  width: 60vw;
+  margin: 50px auto 0;
+}
+
+/* PROJECT PREVIEW */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  width: 55vw;
+  margin: 50px auto 0;
+}
+
+.project-item {
+  margin: 20px;
+}
+
+.preview-img {
+  width: 28vw;
+  filter: grayscale();
+}
+
+.preview-img:hover {
+  filter: none;
+}
+
+.project-title-bg {
+  background-color: var(--yellow);
+  width: 28vw;
+  padding: 5px;
+  margin-top: 3px;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: black;
+  padding: 3px auto;
+  font-weight: 400;
+}
+
+/* CONTACT SECTION */
+.contact-box {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  width: 58%;
+  border: solid 1px var(--white);
+  padding: 5%;
+  margin: 20px;
+}
+
+.contact-item p {
+  margin-bottom: 20px;
+}
+
+.button {
+  font-size: 17px;
+  padding: 10px 20px;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: -90px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+footer i {
+  width: 10px;
+  padding: 0 20px 10px 20px;
+  opacity: 0.8;
+  color: white;
+}
+
+/* ------------- FORM PAGE ------------- */
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.nav-bar-form {
+  background: var(--yellow);
+}
+
+.form-header {
+  margin: 150px auto 100px;
+}
+
+.form-header p {
+  font-size: 1.7rem;
+  line-height: 2.9rem;
+  text-align: center;
+}
+
+.form-header .text-box {
+  margin-top: 100px;
+}
+
+.form-header .center, .message-form .center {
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 5px 0 30px;
+  font-size: 1.3rem;
+  font-family: inherit;
+}
+
+.checkboxes .input-field {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.checkbox-item {
+  padding-bottom: 5px;
+}
+
+.last-text-field {
+  margin-bottom: 5px;
+}
+
+.textarea .button, .input-field .button {
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+/* MESSAGE PAGE */
+.message-form {
+  margin: 150px auto 0;
+}
+
+/* --------- PROJECT PAGES ------------ */
+/* WOMEN PROJECT */
+.project-img {
+  width: 100%;
+  z-index: -100;
+}
+
+.quote-box {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 100;
+  margin: -17vw auto 0;
+  width: 55%;
+  padding: 1vw 0;
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+/* .strich {
+  height: 163px;
+  padding: 10px 0 0 35px;
+} */
+.strich {
+  font-size: 13.05vw;
+  color: black;
+  line-height: 11vw;
+  padding: 0 0.8vw 0 1.1vw;
+}
+
+.text-quote {
+  position: relative;
+}
+
+.quote-box h2 {
+  color: black;
+  font-size: 3.2vw;
+  line-height: 3.5vw;
+}
+
+.author {
+  float: right;
+  font-size: 1vw;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  position: relative;
+  margin-top: 0.8vw;
+  margin-right: 2.7vw;
+}
+
+/* SCHOOL PROJECT */
+.quote-box.green {
+  width: 62%;
+}
+
+/* ROSES PROJECT */
+.rose-buttons {
+  display: flex;
+}
+
+.button.pink {
+  margin-right: 1vw;
+  margin-bottom: 2.5vw;
+}
+
+/* -------------- MEDIA QUERIES ------------ */
+@media (max-width: 992px) {
+
+  /* NAV BAR */
+  nav {
+    height: 70px;
+  }
+
+  #logo {
+    width: 90px;
+    height: inherit;
+  }
+
+  nav ul li {
+    line-height: 70px;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* SONSTIGES */
+  h1 {
+    font-size: 4rem;
+    padding: 7px 15px
+  }
+
+  .text-section {
+    margin-bottom: 150px;
+  }
+
+  .text-box, .contact-box {
+    width: 70vw;
+    margin: 50px auto 0;
+  }
+
+  .yellow-box-right h1 {
+    padding-right: 15px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p, ul {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .underline {
+    text-decoration-thickness: 5px;
+  }
+
+  /* Projects Preview */
+  .projects-container {
+    width: 70vw;
+    flex-direction: column;
+  }
+
+  .preview-img {
+    width: 70vw;
+  }
+
+  .project-item {
+    margin: 10px;
+  }
+
+  .project-title-bg {
+    margin-bottom: 70px;
+    padding: 10px;
+  }
+
+  .project-title-bg.last {
+    margin-bottom: 0;
+  }
+
+  .project-title-bg {
+    margin-top: 10px;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.7rem;
+  }
+
+  p, ul {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .text-section {
+    margin-bottom: 100px;
+  }
+
+  .underline {
+    text-decoration-thickness: 5px;
+  }
+
+  .text-section {
+    margin-top: 10px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .contact-item {
+    max-width: 70vw;
+    min-width: 50vw;
+    margin-bottom: 30px;
+  }
+
+  /* Roses */
+  .quote-box, .quote-box.green {
+    position: relative;
+    width: 100vw;
+    padding: 1.2vw 3vw 1.2vw 3.3vw;
+    margin-top: 1vw;
+    align-items: center;
+  }
+
+  .quote-box h2 {
+    font-size: 5.5vw;
+    line-height: 5.8vw;
+  }
+
+  .strich {
+    font-size: 22vw;
+    padding: 0.1vw 0.9vw 0 1vw;
+  }
+
+  .author {
+    font-size: 0.6rem;
+    margin-top: 0.6vw;
+    margin-right: 5.5vw;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Hamburger Menu */
+  .checkbtn {
+    display: block;
+  }
+
+  /* Nav Bar */
+  nav {
+    background: var(--yellow);
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--yellow);
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover, a.active {
+    background: none;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+
+  /* Sonstiges */
+  #header-img {
+    margin-top: 70px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    background-color: none;
+  }
+
+  .yellow-box-right, .yellow-box-left {
+    text-align: center;
+    width: 100vw;
+    background-color: var(--yellow);
+    padding: 7px 0;
+  }
+
+  .text-box, .contact-box {
+    width: 90vw;
+  }
+
+  .project-title-bg {
+    padding: 3px;
+  }
+
+  .project-title-bg {
+    margin-top: 7px;
+  }
+
+  .contact-item {
+    max-width: 90vw;
+    min-width: 70vw;
+    margin-bottom: 10px;
+  }
+
+  .contact-item.last {
+    margin-bottom: 70px;
+  }
+
+  /* Projects */
+  .project-img {
+    margin-top: 70px;
+  }
+
+  .rose-buttons {
+    flex-direction: column;
+  }
+
+  .image-section {
+    overflow: hidden;
+  }
+
+  .rose-img, .school-img, .women-img, #header-img {
+    margin-top: 70px;
+    width: 222vw;
+  }
+
+  #header-img {
+    margin-left: -30vw;
+  }
+
+  .rose-img {
+    margin-left: -13vw;
+  }
+
+  .school-img {
+    margin-left: -72vw;
+  }
+
+  .women-img {
+    margin-left: -105vw;
+  }
+
+  .quote-box {
+    justify-content: center;
+  }
+
+  .strich {
+    padding: 0 2vw 0 0;
+    font-size: 36.1vw;
+  }
+
+  .text-quote {
+    width: 80vw;
+    padding: 2vw 0 1.6vw;
+  }
+
+  .quote-box h2 {
+    font-size: 6.7vw;
+    line-height: 6.9vw;
+  }
+}
