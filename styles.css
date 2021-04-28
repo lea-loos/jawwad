@@ -162,7 +162,7 @@ li a.active, li a:hover {
 
 /* MAIN PART */
 /* HEADER */
-#header-img {
+#header-img, .rose-img, .school-img, .women-img {
   width: 100vw;
 }
 
